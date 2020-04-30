@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Update details</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<style>
+	#main
+	{
+	width:13cm;
+	height:13cm;
+	background-color:#f3e5f5;
+	margin-left:11cm;
+	margin-top:1.8cm;
+	box-shadow: 5px 10px 8px 10px #888888;
+	border-radius: 10px;
+	padding:10px;
+	}	
+	#tit
+	{
+	font-size:35px;
+	margin-left:5cm;
+	}
+	#name
+	{
+	margin-left:1cm;
+	}
+	#fname
+	{
+	border-radius: 10px;
+    height:0.6cm;
+margin-left:2cm;	
+	}
+	#btn
+	{
+	margin-left:5cm;
+	width:3cm;
+	height:0.8cm;
+	background-color:#ea80fc;
+		border-radius: 10px;
+	}
+	</style>
+</head>
+<body>
+<form action="table.php" method="POST">
+<div id="main">
+<p id="tit"> Details</p>
+<p id="name"> NAME</p> 
+ <input type="text" id="fname" name="name" required>
+ <p id="name"> REGSISTER NO</p> 
+ <input type="text" id="fname" name="regno" required>
+ <p id="name"> YEAR</p> 
+  <input type="text" id="fname" name="year" required>
+  <p id="name"> POINT</p> 
+  <input type="text" id="fname" name="point" required><br>
+  <br>
+  <br>
+  <input type="submit" value="submit" id="btn" >
+</div>
+</form>
+<script>
+$(document).ready(function()
+{setInterval(function(){
+$("#btn").load("table2.php")
+refresh();
+},10000);
+});
+</script>
+</body>
+</html>
